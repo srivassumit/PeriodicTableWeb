@@ -1,0 +1,53 @@
+table {
+    width: 180%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+td {
+    display: table-cell;
+    height: 48px;
+    width: 48px;
+    text-align: center;               
+    border: 1px solid black;
+    vertical-align: middle;
+}
+td.none {
+    border: none;
+}
+td.index {
+    border: none;
+    height: 12px;
+    width: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+td.am {
+    background-color: sandybrown;
+}
+td.aem {
+    background-color: lightgoldenrodyellow;
+}
+td.lanth {
+    background-color: lightpink;
+}
+td.acti {
+    background-color: lightcoral;
+}
+td.trans {
+    background-color: rgb(124, 162, 235);
+}
+td.ptrans {
+    background-color: rgb(181, 204, 181);
+}
+td.metalloid {
+    background-color: rgb(114, 235, 188);
+}
+td.nm {
+    background-color: rgb(0, 255, 98);
+}
+td.ng {
+    background-color: rgb(180, 202, 224);
+}
+td.unkonwn {
+    background-color: rgb(66, 74, 83);
+}

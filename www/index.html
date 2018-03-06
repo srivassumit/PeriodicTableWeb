@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html ng-app="root">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Periodic Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/root.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body ng-controller="index">
+    <script type="text/javascript" src="cordova.js"></script>
+    <div ng-hide="details">
+        <h1 align="center">{{title}}</h1>
+        <table>
+            <tr>
+                <td class="index"></td>
+                <td class="index">1</td>
+                <td class="index">2</td>
+                <td class="index">3</td>
+                <td class="index">4</td>
+                <td class="index">5</td>
+                <td class="index">6</td>
+                <td class="index">7</td>
+                <td class="index">8</td>
+                <td class="index">9</td>
+                <td class="index">10</td>
+                <td class="index">11</td>
+                <td class="index">12</td>
+                <td class="index">13</td>
+                <td class="index">14</td>
+                <td class="index">15</td>
+                <td class="index">16</td>
+                <td class="index">17</td>
+                <td class="index">18</td>
+            </tr>
+            <tr>
+                <td class="index">1</td>
+                <td class="nm" ng-click="showDetails('Hydrogen')">1
+                    <br>H</td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="ng" ng-click="showDetails('Helium')">2
+                    <br>He</td>
+            </tr>
+            <tr>
+                <td class="index">2</td>
+                <td class="am" ng-click="showDetails('Lithium')">3
+                    <br>Li</td>
+                <td class="aem" ng-click="showDetails('Beryllium')">4
+                    <br>Be</td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="metalloid" ng-click="showDetails('Boron')">5
+                    <br>B</td>
+                <td class="nm" ng-click="showDetails('Carbon')">6
+                    <br>C</td>
+                <td class="nm" ng-click="showDetails('Nitrogen')">7
+                    <br>N</td>
+                <td class="nm" ng-click="showDetails('Oxygen')">8
+                    <br>O</td>
+                <td class="nm" ng-click="showDetails('Fluorine')">9
+                    <br>F</td>
+                <td class="ng" ng-click="showDetails('Neon')">10
+                    <br>Ne</td>
+            </tr>
+            <tr>
+                <td class="index">3</td>
+                <td class="am" ng-click="showDetails('Sodium')">11
+                    <br>Na</td>
+                <td class="aem" ng-click="showDetails('Magnesium')">12
+                    <br>Mg</td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="ptrans" ng-click="showDetails('Aluminium')">13
+                    <br>Al</td>
+                <td class="metalloid" ng-click="showDetails('Silicon')">14
+                    <br>Si</td>
+                <td class="nm" ng-click="showDetails('Phosphorus')">15
+                    <br>P</td>
+                <td class="nm" ng-click="showDetails('Sulfur')">16
+                    <br>S</td>
+                <td class="nm" ng-click="showDetails('Chlorine')">17
+                    <br>Cl</td>
+                <td class="ng" ng-click="showDetails('Argon')">18
+                    <br>Ar</td>
+            </tr>
+            <tr>
+                <td class="index">4</td>
+                <td class="am" ng-click="showDetails('Potassium')">19
+                    <br>K</td>
+                <td class="aem" ng-click="showDetails('Calcium')">20
+                    <br>Ca</td>
+                <td class="trans" ng-click="showDetails('Scandium')">21
+                    <br>Sc</td>
+                <td class="trans" ng-click="showDetails('Titanium')">22
+                    <br>Ti</td>
+                <td class="trans" ng-click="showDetails('Vanadium')">23
+                    <br>V</td>
+                <td class="trans" ng-click="showDetails('Chromium')">24
+                    <br>Cr</td>
+                <td class="trans" ng-click="showDetails('Manganese')">25
+                    <br>Mn</td>
+                <td class="trans" ng-click="showDetails('Iron')">26
+                    <br>Fe</td>
+                <td class="trans" ng-click="showDetails('Cobalt')">27
+                    <br>Co</td>
+                <td class="trans" ng-click="showDetails('Nickel')">28
+                    <br>Ni</td>
+                <td class="trans" ng-click="showDetails('Copper')">29
+                    <br>Cu</td>
+                <td class="trans" ng-click="showDetails('Zinc')">30
+                    <br>Zn</td>
+                <td class="ptrans" ng-click="showDetails('Gallium')">31
+                    <br>Ga</td>
+                <td class="metalloid" ng-click="showDetails('Germanium')">32
+                    <br>Ge</td>
+                <td class="metalloid" ng-click="showDetails('Arsenic')">33
+                    <br>As</td>
+                <td class="nm" ng-click="showDetails('Selenium')">34
+                    <br>Se</td>
+                <td class="nm" ng-click="showDetails('Bromine')">35
+                    <br>Br</td>
+                <td class="ng" ng-click="showDetails('Krypton')">36
+                    <br>Kr</td>
+            </tr>
+            <tr>
+                <td class="index">5</td>
+                <td class="am" ng-click="showDetails('Rubidium')">37
+                    <br>Rb</td>
+                <td class="aem" ng-click="showDetails('Strontium')">38
+                    <br>Sr</td>
+                <td class="trans" ng-click="showDetails('Yttrium')">39
+                    <br>Y</td>
+                <td class="trans" ng-click="showDetails('Zirconium')">40
+                    <br>Zr</td>
+                <td class="trans" ng-click="showDetails('Niobium')">41
+                    <br>Nb</td>
+                <td class="trans" ng-click="showDetails('Molybednum')">42
+                    <br>Mo</td>
+                <td class="trans" ng-click="showDetails('Technetium')">43
+                    <br>Tc</td>
+                <td class="trans" ng-click="showDetails('Ruthenium')">44
+                    <br>Ru</td>
+                <td class="trans" ng-click="showDetails('Rhodium')">45
+                    <br>Rh</td>
+                <td class="trans" ng-click="showDetails('Palladium')">46
+                    <br>Pd</td>
+                <td class="trans" ng-click="showDetails('Silver')">47
+                    <br>Ag</td>
+                <td class="trans" ng-click="showDetails('Cadmium')">48
+                    <br>Cd</td>
+                <td class="ptrans" ng-click="showDetails('Indium')">49
+                    <br>In</td>
+                <td class="ptrans" ng-click="showDetails('Tin')">50
+                    <br>Sn</td>
+                <td class="metalloid" ng-click="showDetails('Antimony')">51
+                    <br>Sb</td>
+                <td class="metalloid" ng-click="showDetails('Tellurium')">52
+                    <br>Te</td>
+                <td class="nm" ng-click="showDetails('Iodine')">53
+                    <br>I</td>
+                <td class="ng" ng-click="showDetails('Xenon')">54
+                    <br>Xe</td>
+            </tr>
+            <tr>
+                <td class="index">6</td>
+                <td class="am">55
+                    <br>Cs</td>
+                <td class="aem">56
+                    <br>Ba</td>
+                <td class="lanth">57-71</td>
+                <td class="trans">72
+                    <br>Hf</td>
+                <td class="trans">73
+                    <br>Ta</td>
+                <td class="trans">74
+                    <br>W</td>
+                <td class="trans">75
+                    <br>Re</td>
+                <td class="trans">76
+                    <br>Os</td>
+                <td class="trans">77
+                    <br>Ir</td>
+                <td class="trans">78
+                    <br>Pt</td>
+                <td class="trans">79
+                    <br>Au</td>
+                <td class="trans">80
+                    <br>Hg</td>
+                <td class="ptrans">81
+                    <br>Tl</td>
+                <td class="ptrans">82
+                    <br>Pb</td>
+                <td class="ptrans">83
+                    <br>Bi</td>
+                <td class="ptrans">84
+                    <br>Po</td>
+                <td class="metalloid">85
+                    <br>At</td>
+                <td class="ng">86
+                    <br>Rn</td>
+            </tr>
+            <tr>
+                <td class="index">7</td>
+                <td class="am">87
+                    <br>Fr</td>
+                <td class="aem">88
+                    <br>Ra</td>
+                <td class="acti">89-103</td>
+                <td class="trans">104
+                    <br>Rf</td>
+                <td class="trans">105
+                    <br>Db</td>
+                <td class="trans">106
+                    <br>Sg</td>
+                <td class="trans">107
+                    <br>Bh</td>
+                <td class="trans">108
+                    <br>Hs</td>
+                <td class="unkonwn">109
+                    <br>Mt</td>
+                <td class="unkonwn">110
+                    <br>Ds</td>
+                <td class="unkonwn">111
+                    <br>Rg</td>
+                <td class="trans">112
+                    <br>Cn</td>
+                <td class="unkonwn">113
+                    <br>Nh</td>
+                <td class="ptrans">114
+                    <br>Fl</td>
+                <td class="unkonwn">115
+                    <br>Mc</td>
+                <td class="unkonwn">116
+                    <br>Lv</td>
+                <td class="unkonwn">117
+                    <br>Ts</td>
+                <td class="unkonwn">118
+                    <br>Og</td>
+            </tr>
+            <tr>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+                <td class="none"></td>
+            </tr>
+            <tr>
+                <td class="none" colspan=3>Lanthanoids</td>
+                <td class="none"></td>
+                <td class="lanth">57
+                    <br>La</td>
+                <td class="lanth">58
+                    <br>Ce</td>
+                <td class="lanth">59
+                    <br>Pr</td>
+                <td class="lanth">60
+                    <br>Nd</td>
+                <td class="lanth">61
+                    <br>Pm</td>
+                <td class="lanth">62
+                    <br>Sm</td>
+                <td class="lanth">63
+                    <br>Eu</td>
+                <td class="lanth">64
+                    <br>Gd</td>
+                <td class="lanth">65
+                    <br>Tb</td>
+                <td class="lanth">66
+                    <br>Dy</td>
+                <td class="lanth">67
+                    <br>Ho</td>
+                <td class="lanth">68
+                    <br>Er</td>
+                <td class="lanth">69
+                    <br>Ym</td>
+                <td class="lanth">70
+                    <br>Yb</td>
+                <td class="lanth">71
+                    <br>Lu</td>
+            </tr>
+            <tr>
+                <td class="none" colspan=3>Actinoids</td>
+                <td class="none"></td>
+                <td class="acti">89
+                    <br>Ac</td>
+                <td class="acti">90
+                    <br>Th</td>
+                <td class="acti">91
+                    <br>Pa</td>
+                <td class="acti">92
+                    <br>U</td>
+                <td class="acti">93
+                    <br>Np</td>
+                <td class="acti">94
+                    <br>Pu</td>
+                <td class="acti">95
+                    <br>Am</td>
+                <td class="acti">96
+                    <br>Cm</td>
+                <td class="acti">97
+                    <br>Bk</td>
+                <td class="acti">98
+                    <br>Cf</td>
+                <td class="acti">99
+                    <br>Es</td>
+                <td class="acti">100
+                    <br>Fm</td>
+                <td class="acti">101
+                    <br>Md</td>
+                <td class="acti">102
+                    <br>No</td>
+                <td class="acti">103
+                    <br>Lr</td>
+            </tr>
+        </table>
+    </div>
+
+    <div ng-show="details">
+        <h1>
+            {{element}}
+        </h1>This page contains details about {{element}}<br>
+        <button ng-click="goBack()">Go Back</button>
+    </div>
+</body>
+
+</html>
