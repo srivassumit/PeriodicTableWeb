@@ -1,4 +1,15 @@
-table {
+body {
+    background-color: rgb(41, 32, 32);
+}
+.fixedElement {
+    background-color: #e7e6e6;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    font-weight: bold;
+}
+table.main-table {
     width: 180%;
     table-layout: fixed;
     border-collapse: collapse;
@@ -7,17 +18,21 @@ td {
     display: table-cell;
     height: 48px;
     width: 48px;
-    text-align: center;               
+    text-align: center;
+    font-weight: bold;
     border: 1px solid black;
     vertical-align: middle;
 }
 td.none {
     border: none;
+    text-align: left;
+    color: white;
 }
 td.index {
     border: none;
     height: 12px;
     width: 12px;
+    color: white;
     text-align: center;
     vertical-align: middle;
 }
@@ -51,6 +66,16 @@ td.ng {
 td.unkonwn {
     background-color: rgb(66, 74, 83);
 }
-tr.togglehighlight {
-    background: bold red;
+table.details {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.backBtn {
+    width: 20%;
+    height: 15%;
+    border: 0;
+    background: none green;
+    box-shadow: none;
+    border-radius: 0px;
 }

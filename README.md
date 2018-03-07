@@ -1,14 +1,17 @@
-# A Blank PhoneGap App
+# A PhoneGap App for a Periodic Table Mobile Web Application
 
-## Usage
+# Steps to Run
 
-### PhoneGap CLI
+1. Clone this repository: `git clone https://github.com/srivassumit/PeriodicTableWeb`
+2. Install [PhoneGap Desktop](http://docs.phonegap.com/getting-started/1-install-phonegap/desktop/) on your desktop.
+3. Install [PhoneGap Mobile](http://docs.phonegap.com/getting-started/2-install-mobile-app/) on your mobile phone.
+4. Open PhoneGap Desktop and open the cloned repository.
+5. Run the Project from PhoneGap Desktop. This will run a server on your desktop whose IP address will be visible at the bottom on the PhoneGap desktop application.
+6. Using the PhoneGap Mobile App, connect to the server address given in PhoneGap Desktop app.
 
-    $ phonegap create my-app --template blank
 
-### Desktop
 
-In your browser, open the file:
+### TO-DO
 
-    /www/index.html
-
+- Find some API to fetch details of elements based on atomic number or element name
+- Include image by fetching it online

@@ -6,15 +6,16 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Periodic Table</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="res/elements.js"></script>
     <script src="js/root.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body ng-controller="index">
+<body ng-controller="index" background-color="black">
     <script type="text/javascript" src="cordova.js"></script>
     <div ng-hide="details">
-        <h1 align="center">{{title}}</h1>
-        <table>
+        <h1 align="center" class="fixedElement">{{title}}</h1><br><br><br>
+        <table class="main-table">
             <tr>
                 <td class="index"></td>
                 <td class="index">1</td>
@@ -364,10 +365,42 @@
     </div>
 
     <div ng-show="details">
-        <h1>
+        <h1 class="fixedElement">
             {{element}}
-        </h1>This page contains details about {{element}}<br>
-        <button ng-click="goBack()">Go Back</button>
+        </h1><br><br><br>
+        <button ng-click="goBack()" class="backBtn">Back</button>
+        <p>
+            <table class="details">
+                <tr>
+                    <td class="none">Atomic Number</td>
+                    <td class="none">{{atomicNumber}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Group</td>
+                    <td class="none">{{group}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Period</td>
+                    <td class="none">{{period}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Element category</td>
+                    <td class="none">{{elementCategory}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Block</td>
+                    <td class="none">{{block}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Electron configuration</td>
+                    <td class="none">{{eConfig}}</td>
+                </tr>
+                <tr>
+                    <td class="none">Electrons per shell</td>
+                    <td class="none">{{eShell}}</td>
+                </tr>
+            </table>
+        </p>
     </div>
 </body>
 
