@@ -51,3 +51,6 @@ td.ng {
 td.unkonwn {
     background-color: rgb(66, 74, 83);
 }
+tr.togglehighlight {
+    background: bold red;
+}

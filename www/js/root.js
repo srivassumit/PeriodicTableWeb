@@ -3,6 +3,9 @@ angular.module('root', [])
         $scope.title = "Periodic Table";
         
         $scope.details = false;
+
+        $scope.toggleLanth = 
+        $scope.toggleActi
         
         $scope.showDetails = function(element) {
             console.log(element);
@@ -13,5 +16,6 @@ angular.module('root', [])
         $scope.goBack = function() {
             console.log("Back pressed");
             $scope.details = false;
-        }
-    }]);
+        };
+
+}]);
