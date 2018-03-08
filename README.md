@@ -13,5 +13,6 @@
 
 ### TO-DO
 
-- Find some API to fetch details of elements based on atomic number or element name. For example like this: https://www.ptable.com/
-- Include image by fetching it online
+- [x] Find some API to fetch details of elements based on atomic number or element name. For example like this: https://www.ptable.com/
+- [x] Include image by fetching it online
+- [ ] Format the HTML returned from Wiki API call.
