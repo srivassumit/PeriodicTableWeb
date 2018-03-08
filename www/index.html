@@ -6,6 +6,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Periodic Table</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
     <script src="res/elements.js"></script>
     <script src="js/root.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -370,7 +371,7 @@
         </h1><br><br><br>
         <button ng-click="goBack()" class="backBtn">Back</button>
         <p>
-            <table class="details">
+            <!-- <table class="details">
                 <tr>
                     <td class="none">Atomic Number</td>
                     <td class="none">{{atomicNumber}}</td>
@@ -399,8 +400,10 @@
                     <td class="none">Electrons per shell</td>
                     <td class="none">{{eShell}}</td>
                 </tr>
-            </table>
+            </table> -->
         </p>
+        <!-- <ng-include src="template"></ng-include> -->
+        <p ng-bind-html="dynamicContent" class="detailsText"></p>
     </div>
 </body>
 

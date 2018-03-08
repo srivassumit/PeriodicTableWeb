@@ -79,3 +79,14 @@ table.details {
     box-shadow: none;
     border-radius: 0px;
 }
+.whiteText {
+    color: white;
+}
+.detailsText {
+    color: black;
+    background: white;
+    width: 100%;
+    text-align: left;
+    float: left;
+    padding: 0;
+}

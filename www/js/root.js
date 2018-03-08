@@ -1,5 +1,5 @@
-angular.module('root', [])
-    .controller("index", ["$scope", function ($scope) {
+angular.module('root', ['ngSanitize'])
+    .controller("index", ["$scope", "$http", function ($scope, $http) {
         $scope.title = "Periodic Table";
         
         $scope.details = false;
@@ -17,6 +17,19 @@ angular.module('root', [])
             $scope.eConfig=parts[5];
             $scope.eShell=parts[6];
             $scope.details = true;
+            console.log('calling http');
+            $http({
+                method: 'GET',
+                url: 'http://en.wikipedia.org/w/api.php?action=parse&format=json&section=0&prop=text&page='+element
+            }).then(function successCallback(response) {
+                // console.log('Success: ' + JSON.stringify(response));
+                console.log('Success');
+                $scope.dynamicContent = response.data.parse.text['*'];
+            }, function errorCallback(response) {
+                // console.log('Error: ' + JSON.stringify(response));
+                console.log('Error');
+                $scope.dynamicContent = '<div>' + response.error.info; + '</div>';
+            });
         };
 
         $scope.goBack = function() {
